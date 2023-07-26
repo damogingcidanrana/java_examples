@@ -4,17 +4,13 @@ import java.util.Scanner;
 
 public class Main {
     static int smallestCommonDivisor (int a, int b) {
-        int max = Math.max(a, b);
-        int min = Math.min(a, b);
+        int remainder;
 
-        while (true) {
-            int remainder = max % min;
-            if (remainder == 0) {
-                return min;
-            }
-            max = min;
-            min = remainder;
+        while ((remainder = a % b) != 0) {
+            a = b;
+            b = remainder;
         }
+        return b;
     }
 
     public static void main(String[] args) {

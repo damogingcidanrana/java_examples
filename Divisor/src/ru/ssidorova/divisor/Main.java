@@ -3,7 +3,7 @@ package ru.ssidorova.divisor;
 import java.util.Scanner;
 
 public class Main {
-    public static int smallestCommonDivisor (int a, int b) {
+    static int smallestCommonDivisor (int a, int b) {
         int max = Math.max(a, b);
         int min = Math.min(a, b);
 

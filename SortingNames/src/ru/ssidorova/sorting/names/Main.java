@@ -14,7 +14,9 @@ public class Main {
         do {
             System.out.println("Введите имя");
             input = scanner.nextLine();
-            names.add(input);
+            if (!input.isEmpty()) {
+                names.add(input);
+            }
         } while (!input.isEmpty());
 
         Collections.sort(names);
